@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# production
+/dist
+
+# parcel cache
+.parcel-cache/
+
+# misc
+.DS_Store
+.env
+*.log
+
+# editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# local env files
+.env.* 
