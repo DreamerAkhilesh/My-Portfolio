@@ -26,22 +26,24 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 fade-in">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800 text-center">Contact</h2>
-      <p className="mb-6 text-gray-700 text-center">Feel free to reach out to me via email or connect on social media!</p>
-      <div className="flex justify-center space-x-8">
-        {socialLinks.map((link, idx) => (
-          <a
-            key={idx}
-            href={link.href}
-            aria-label={link.label}
-            className="text-blue-600 hover:text-blue-800 transition-colors"
-            target={link.href.startsWith('http') ? '_blank' : undefined}
-            rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-          >
-            {link.icon}
-          </a>
-        ))}
+    <section id="contact" className="py-16 fade-in flex justify-center">
+      <div className="glass-card border-l-8 border-green-400 shadow-xl p-8 max-w-xl w-full text-center relative">
+        <h2 className="text-2xl font-bold mb-6 text-green-500 tracking-tight drop-shadow-lg">Contact</h2>
+        <p className="mb-8 text-gray-700">Feel free to reach out to me via email or connect on social media!</p>
+        <div className="flex justify-center space-x-8">
+          {socialLinks.map((link, idx) => (
+            <a
+              key={idx}
+              href={link.href}
+              aria-label={link.label}
+              className="text-green-500 hover:text-pink-400 transition-colors transform hover:scale-125 duration-300 bg-white bg-opacity-60 rounded-full p-3 shadow-lg border border-green-200"
+              target={link.href.startsWith('http') ? '_blank' : undefined}
+              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -8,9 +8,15 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="font-sans bg-gray-50 min-h-screen flex flex-col">
+    <div className="relative font-sans min-h-screen flex flex-col overflow-x-hidden">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 bg-animated-gradient -z-10" />
+      {/* Animated Shapes */}
+      <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-pink-400 animated-shape animate-pulse" />
+      <div className="absolute bottom-[-80px] right-[-80px] w-72 h-72 bg-green-400 animated-shape animate-pulse" />
+      {/* Main Content */}
       <Header />
-      <main className="max-w-3xl mx-auto px-4 flex-1">
+      <main className="max-w-3xl mx-auto px-4 flex-1 w-full">
         <About />
         <Projects />
         <Resume />
